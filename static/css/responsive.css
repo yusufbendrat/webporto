@@ -1,3 +1,12 @@
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
 @media screen and (max-width: 1200px) {
   .main-container {
     width: 100%;
@@ -45,6 +54,7 @@
   .burger {
     display: block;
     cursor: pointer;
+    z-index: 1002;
   }
 
   .toggle-burger .line-1 {
@@ -60,28 +70,39 @@
   }
 
   nav {
-    position: fixed;
-    display: flex;
-    width: 60%;
-    right: 0;
-    top: 0;
-    height: 100vh;
-    flex-direction: column;
-    background: var(--primaryBackgroundColor);
-    border-left: 1px solid var(--borderColor);
-    z-index: 9;
-    transform: translateX(100%);
-    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    padding: 1rem 0;
-    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+    position: static;
+    width: auto;
+    height: auto;
+    transform: none;
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+    border: none;
   }
 
   nav ul {
+    position: fixed;
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 65%;
+    max-width: 320px;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    background: var(--primaryBackgroundColor);
+    border-left: 1px solid var(--borderColor);
+    z-index: 1001;
+    transform: translateX(100%);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     gap: 2.5rem;
+    box-shadow: -15px 0 30px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    padding: 0;
   }
 
-  .nav-active {
+  .nav-active ul, nav.nav-active ul {
     transform: translateX(0);
   }
 
@@ -98,24 +119,33 @@
     font-size: 0.85rem;
   }
 
-  #hero {
+  .hero-grid {
     grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  #hero {
     height: auto;
     padding: 3rem 0;
   }
 
   .hero-right {
     order: -1;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
   }
 
   .hero-right img {
-    width: 80%;
-    max-width: 400px;
+    width: 100%;
+    max-width: 300px;
   }
 
   .hero-left {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .hero-name {
@@ -142,10 +172,12 @@
 @media screen and (max-width: 768px) {
   .experience-header {
     flex-direction: column;
+    align-items: flex-start;
   }
   
   .experience-date {
     text-align: left;
+    margin-top: 0.5rem;
   }
   
   .experience-skills span {
@@ -153,8 +185,8 @@
   }
   
   .hero-image-container {
-    width: 280px;
-    height: 280px;
+    width: 250px;
+    height: 250px;
     margin: 0 auto;
   }
 }
@@ -184,7 +216,8 @@
 
   .contact-item {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
     gap: 1rem;
   }
 
@@ -203,17 +236,13 @@
     --sectionPadding: 3.5rem 0;
   }
 
-  nav {
-    width: 80%;
-  }
-
   .hero-name {
     font-size: 2rem;
   }
 
   .hero-image-container {
-    width: 220px;
-    height: 220px;
+    width: 200px;
+    height: 200px;
   }
 
   .grid-3 {

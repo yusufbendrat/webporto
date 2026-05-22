@@ -1,13 +1,13 @@
-{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/responsive.css' %}" />
+    <link rel="stylesheet" href="/static/css/styles.css" />
+    <link rel="stylesheet" href="/static/css/responsive.css" />
     <title>Muhammad Yusuf Ridwan Hidayat - Information Systems</title>
-    <link rel="icon" href="{% static 'favian.ico' %}" type="image/x-icon">
+    <link rel="icon" href="/static/favian.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
@@ -99,7 +99,7 @@
               <li><a href="#skills">Skill</a></li>
               <li><a href="#contact">Contact</a></li>
               <li>
-                <a href="{% static 'resume.pdf' %}" target="_blank" class="btn">Resume</a>
+                <a href="/static/resume.pdf" target="_blank" class="btn">Resume</a>
               </li>
             </ul>
           </nav>
@@ -136,7 +136,7 @@
 
           <div class="hero-right">
             <div class="hero-image-container">
-              <img src="{% static 'images/pas foto.jpg' %}" alt="Muhammad Yusuf Ridwan Hidayat" class="hero-image"/>
+              <img src="/static/images/pas%20foto.jpg" alt="Muhammad Yusuf Ridwan Hidayat" class="hero-image"/>
             </div>
           </div>
         </div>
@@ -259,7 +259,7 @@
           <div class="portfolio">
             <div class="portfolio-cover">
               <img
-                src="{% static 'images/monit.jpeg' %}"
+                src="/static/images/monit.jpeg"
                 alt="SDN Network Monitoring Dashboard"
               />
             </div>
@@ -281,7 +281,7 @@
           <div class="portfolio">
             <div class="portfolio-cover">
               <img
-                src="{% static 'images/embege.jpg' %}"
+                src="/static/images/embege.jpg"
                 alt="MBG Barokah IAE"
               />
             </div>
@@ -303,7 +303,7 @@
           <div class="portfolio">
             <div class="portfolio-cover">
               <img
-                src="{% static 'images/pam.png' %}"
+                src="/static/images/pam.png"
                 alt="PAM JAYA System Analysis"
               />
             </div>
@@ -512,6 +512,6 @@
       <p>&#169; 2026 Muhammad Yusuf Ridwan Hidayat. All rights reserved.</p>
     </footer>
 
-    <script src="{% static 'js/main.js' %}"></script>
+    <script src="/static/js/main.js"></script>
   </body>
 </html>

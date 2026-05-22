@@ -17,8 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from base import views
+from django_distill import distill_path
+
+def get_index():
+    return None
 
 urlpatterns = [
     path('', views.index, name='index'),
+    distill_path('', views.index, name='index', distill_func=get_index),
 ]
 

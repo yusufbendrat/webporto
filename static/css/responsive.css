@@ -60,7 +60,8 @@
   }
 
   nav {
-    position: static;
+    position: fixed;
+    display: flex;
     width: 60%;
     right: 0;
     top: 0;
